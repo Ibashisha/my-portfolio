@@ -1,0 +1,58 @@
+# ----------------------------------------
+# Node & Package Manager
+# ----------------------------------------
+node_modules/
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# ----------------------------------------
+# Next.js Build Output
+# ----------------------------------------
+.next/
+out/
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# ----------------------------------------
+# Logs
+# ----------------------------------------
+logs/
+*.log
+*.log.*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor folders/files
+.vscode/
+.idea/
+*.swp
+
+# Local config
+.next/
+.vercel/
+
+# Optional
+# Ignore coverage if using a test runner
+coverage/
+
+# Ignore local backups
+*.bak
+*.tmp
+
+# Ignore lock files (optional, depending on workflow)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
