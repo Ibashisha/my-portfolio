@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -- BASE */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5efe0;
+  color: #3e2212;
+  font-family: "Lora", Georgia, serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* -- CUSTOM CURSOR -- */
+.cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #c4622d;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.08s,
+    width 0.2s,
+    height 0.2s,
+    background 0.2s;
+  mix-blend-mode: multiply;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #c4622d;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.16s ease;
+  opacity: 0.5;
+}
+
+.cursor-dot.hovered {
+  transform: translate(-50%, -50%) scale(2);
+}
+.cursor-ring.hovered {
+  transform: translate(-50%, -50%) scale(0.55);
+  opacity: 0.3;
+}
+
+.cursor-dot.text-hover {
+  background-color: #fbbf24;
+}
+.cover-ring.text-hover {
+  border-color: #fbbf24;
+}
+
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
